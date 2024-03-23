@@ -49,12 +49,21 @@ class ProductServiceImplTest {
         assertNotNull(products);
     }
 
+//    @Test
+//    public void retrieveProduct(){
+//        Product savedProduct = iProductService.retrieveProduct(1L);
+//        assertNotNull(savedProduct);
+//        assertEquals(1L,1L);
+//    }
     @Test
-    public void retrieveProduct(){
+    public void retrieveProduct() {
+
         Product savedProduct = iProductService.retrieveProduct(1L);
+
         assertNotNull(savedProduct);
-        assertEquals(1L,1L);
+        assertEquals(1L, savedProduct.getIdProduct()); // Vérifie que l'ID du produit récupéré correspond à 1
     }
+
 
 
 }
