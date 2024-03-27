@@ -59,7 +59,6 @@ class ProductServiceImplTest {
     public void retrieveProduct() {
 
         Product savedProduct = iProductService.retrieveProduct(1L);
-
         assertNotNull(savedProduct);
         assertEquals(1L, savedProduct.getIdProduct()); // Vérifie que l'ID du produit récupéré correspond à 1
     }
