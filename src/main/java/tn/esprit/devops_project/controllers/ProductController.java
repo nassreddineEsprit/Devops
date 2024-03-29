@@ -14,9 +14,10 @@ import java.util.List;
 public class ProductController {
 
     private final IProductService productService;
+
     @GetMapping("/")
     public String home() {
-        return "Welcome to the home page!";
+        return "Welcome to home page!";
     }
     @PostMapping("/product/{idStock}")
     Product addProduct(@RequestBody Product product,@PathVariable Long idStock){
