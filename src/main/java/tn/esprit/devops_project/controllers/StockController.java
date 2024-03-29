@@ -13,7 +13,10 @@ import java.util.List;
 public class StockController {
 
     IStockService stockService;
-
+    @GetMapping("/")
+    public String home() {
+        return "Welcome to the home page!";
+    }
     @PostMapping("/stock")
     Stock addStock(@RequestBody Stock stock){
         return stockService.addStock(stock);
