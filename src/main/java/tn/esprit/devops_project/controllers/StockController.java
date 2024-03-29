@@ -14,6 +14,10 @@ public class StockController {
 
     IStockService stockService;
 
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello";
+    }
     @PostMapping("/stock")
     Stock addStock(@RequestBody Stock stock){
         return stockService.addStock(stock);

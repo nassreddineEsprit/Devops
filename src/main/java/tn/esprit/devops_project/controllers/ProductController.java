@@ -15,10 +15,7 @@ public class ProductController {
 
     private final IProductService productService;
 
-    @GetMapping("/home")
-    public String home() {
-        return "Welcome to home page!";
-    }
+
     @PostMapping("/product/{idStock}")
     Product addProduct(@RequestBody Product product,@PathVariable Long idStock){
         return productService.addProduct(product,idStock);
